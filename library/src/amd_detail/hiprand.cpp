@@ -139,7 +139,7 @@ hiprandStatus_t HIPRANDAPI hiprandDestroyGenerator(hiprandGenerator_t generator)
 hiprandStatus_t HIPRANDAPI
     hiprandGenerate(hiprandGenerator_t generator, unsigned int* output_data, size_t n)
 {
-    return to_hiprand_status(rocrand_generate((rocrand_generator)(generator), output_data, n));
+    return to_hiprand_status(rocrand_generate((rocrand_generator)(generator), output_data, n+1));
 }
 
 hiprandStatus_t HIPRANDAPI
